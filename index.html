@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/assets/styles/reset.css" />
     <link rel="stylesheet" href="/assets/styles/default.css" />
     <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <link rel="stylesheet" href="/assets/styles/error.css" />
+    <link rel="stylesheet" href="/assets/styles/input.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700&display=swap"
       rel="stylesheet"
@@ -90,24 +92,50 @@
           </span>
         </div>
       </div>
-      <form class="">
+      <form id="myform" method="post" name="registration">
         <div class="form-section form-card">
           <h6 class="price-text form-title">
             Garanta o curso nessa oferta
           </h6>
-          <span class="subtitle form-subtitle">
+          <h6 class="subtitle form-subtitle">
             Se inscreva e te enviaremos o cupom
-          </span>
-          <input placeholder="Primeiro Nome" class="first-name" type="text" />
-          <input placeholder="Sobrenome" class="last-name" type="text" />
-          <input placeholder="E-mail" class="email" type="email" />
-          <input placeholder="Telefone" class="phone" type="text" />
-          <input
-            placeholder="Nome da empresa"
-            class="company-name"
-            type="text"
-          />
-          <input placeholder="URL do site" class="company-name" type="url" />
+          </h6>
+
+          <label id="field-firstname" class="textfield">
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder=" "
+            />
+            <span>Primeiro Nome</span>
+          </label>
+
+          <label for="lastname" class="textfield">
+            <input type="text" name="lastname" id="lastname" placeholder=" " />
+            <span>Sobrenome</span>
+          </label>
+
+          <label for="email" class="textfield">
+            <input type="email" name="email" id="email" placeholder=" " />
+            <span>E-mail</span>
+          </label>
+
+          <label for="phone" class="textfield">
+            <input type="text" name="phone" id="phone" placeholder=" " />
+            <span>Telefone</span>
+          </label>
+
+          <label for="company" class="textfield">
+            <input type="text" name="company" id="company" placeholder=" " />
+            <span>Nome da Empresa</span>
+          </label>
+
+          <label for="url" class="textfield">
+            <input type="url" name="url" id="url" placeholder=" " />
+            <span>URL do site</span>
+          </label>
+
           <button class="form-button">
             Quero aprender
           </button>
@@ -203,5 +231,20 @@
         </span>
       </a>
     </footer>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("user_jrK2hqcIcbXcWKWsFOMgj");
+      })();
+    </script>
   </body>
+  <script type="text/javascript" src="/main.js"></script>
 </html>

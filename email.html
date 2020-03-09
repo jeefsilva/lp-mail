@@ -4,89 +4,124 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/assets/styles/input.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
   </head>
-  <style>
-    body {
-  font-family: arial;
-  font-size: 12px;
-  color: #666;
-}
-form {
-  width: 500px;
-  background: white;
-  padding: 20px 25px;
-  margin: auto;
-  margin-top: 30px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-}
-form input,
-form textarea {
-  font: inherit;
-  padding: 5px 5px;
-  width: 100%;
-  margin-top: 3px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-form button {
-  border: 1px solid rgba(0,0,0,0.2);
-  padding: 8px 35px;
-  font-size: 12px;
-  background: #888;
-  color: white;
-}
-form label {
-  color: #777;
-  font-size: 11px;
-  margin-bottom: 2px;
-  display: block;
-}
-  </style>
   <body>
-    <form id="myform" method="post">
-      <label>reply_to</label>
-      <input type="text" name="reply_to" />
-      <label>from_name</label>
-      <input type="text" name="from_name" />
-      <label>to_name</label>
-      <input type="text" name="to_name" />
-      <label>message_html</label>
-      <input type="text" name="message_html" />
-      <br><br>
+    <form id="myform" method="post" name="registration">
+      <label class="textfield">
+        <input type="text" name="firstname" id="firstname" placeholder=" ">
+        <span>Textfield</span>
+      </label>
+
+      <label for="lastname" class="textfield">
+        <input type="text" name="lastname" id="lastname" placeholder=" ">
+        <span>Textfield</span>
+      </label>
+
+      <label for="email" class="textfield">
+        <input
+          type="email"
+          name="email"
+          id="email" placeholder=" "
+          >
+        <span>Textfield</span>
+      </label>
+
+      <label for="password" class="textfield">
+        <input
+          type="password"
+          name="password"
+          id="password" placeholder=" "
+        >
+        <span>Textfield</span>
+      </label>
+      <br /><br />
       <button>
-      Send
+        Send
       </button>
-      </form>
-      
-      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-      <script type="text/javascript">
-         (function(){
-            emailjs.init("user_jrK2hqcIcbXcWKWsFOMgj");
-         })();
-      </script>
+    </form>
+
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("user_jrK2hqcIcbXcWKWsFOMgj");
+      })();
+    </script>
   </body>
   <script>
+    // Wait for the DOM to be ready
+    $(function() {
+      // Initialize form validation on the registration form.
+      // It has the name attribute "registration"
+      $("form[name='registration']").validate({
+        // Specify validation rules
+        rules: {
+          // The key name on the left side is the name attribute
+          // of an input field. Validation rules are defined
+          // on the right side
+          firstname: "required",
+          lastname: "required",
+          email: {
+            required: true,
+            // Specify that email should be validated
+            // by the built-in "email" rule
+            email: true
+          },
+          password: {
+            required: true,
+            minlength: 5
+          }
+        },
+        // Specify validation error messages
+        messages: {
+          firstname: "Please enter your firstname",
+          lastname: "Please enter your lastname",
+          password: {
+            required: "Please provide a password",
+            minlength: "Your password must be at least 5 characters long"
+          },
+          email: "Please enter a valid email address"
+        },
+        // Make sure the form is submitted to the destination defined
+        // in the "action" attribute of the form when valid
+        submitHandler: function() {
+          var myform = $("form#myform");
 
-var myform = $("form#myform");
-myform.submit(function(event){
-	event.preventDefault();
+          // Change to your service ID, or keep using the default service
+          var service_id = "default_service";
+          var template_id = "template_o9GzUQFI";
 
-  // Change to your service ID, or keep using the default service
-  var service_id = "default_service";
-  var template_id = "template_o9GzUQFI";
+          myform.find("button").text("Sending...");
 
-  myform.find("button").text("Sending...");
-  emailjs.sendForm(service_id,template_id,myform[0])
-  	.then(function(){ 
-    	alert("Sent!");
-       myform.find("button").text("Send");
-    }, function(err) {
-       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("button").text("Send");
+          emailjs.sendForm(service_id, template_id, myform[0]).then(
+            function() {
+              console.log(myform[0].elements[0].value);
+              $().css("background-color", "red");
+              alert("Sent!");
+            },
+            function(err) {
+              alert(
+                "Send email failed!\r\n Response:\n " + JSON.stringify(err)
+              );
+              myform.find("button").text("Send");
+            }
+          );
+          return false;
+        }
+      });
     });
-  return false;
-});
   </script>
 </html>

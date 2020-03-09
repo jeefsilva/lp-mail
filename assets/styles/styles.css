@@ -85,12 +85,11 @@ body {
   color: var(--disabled);
   width: 350px;
   font-weight: 400;
-  margin-bottom: 12px;
 }
 
 .form-subtitle {
   color: var(--disabled);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .depo-section {
@@ -99,22 +98,6 @@ body {
 
 .first-name {
   margin-top: 36px;
-}
-
-input {
-  width: 279px;
-  height: 22px;
-  background: white;
-  border: 1px solid rgba(116, 130, 150, 0.6);
-  border-radius: 8px;
-  margin-bottom: 30px;
-  padding: 15px 55px 15px 16px;
-}
-
-input::placeholder {
-  font-size: 20px;
-  line-height: 23px;
-  color: var(--placeholder);
 }
 
 .form-button {
