@@ -1,0 +1,172 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Roboto;
+  }
+  
+  h1 {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+  }
+  
+  h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  }
+  
+  h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 36px;
+  }
+  
+  label {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  }
+  
+  footer span {
+  font-size: 16px;
+  line-height: 26px;
+  }
+  
+  .subtitle {
+  font-size: 18px;
+  line-height: 36px;
+  }
+  
+  .testimonials {
+  font-style: italic;
+  font-size: 24px;
+  line-height: 39px;
+  }
+  
+  .special-title {
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 61px;
+  }
+  
+  .price-text {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 43px;
+  }
+  
+  .special-price-text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 33px;
+  }
+  
+  .helper-text {
+  font-size: 14px;
+  line-height: 16px;
+  }
+
+  /* Flex Box System */
+
+.flex {
+  display: flex;
+}
+
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-column-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.max-content {
+  width: max-content;
+}
+
+.display-none {
+  display: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.fill-available {
+  width: -webkit-fill-available;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.above-all {
+  z-index: 100 !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.cover {
+  object-fit: cover;
+}
