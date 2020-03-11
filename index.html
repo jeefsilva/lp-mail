@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/assets/styles/styles.css" />
     <link rel="stylesheet" href="/assets/styles/error.css" />
     <link rel="stylesheet" href="/assets/styles/input.css" />
+    <link rel="stylesheet" href="/assets/styles/balls.css" />
+    <link rel="stylesheet" href="/assets/styles/media.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700&display=swap"
       rel="stylesheet"
@@ -18,14 +20,14 @@
     <header>
       <img alt="Logo Voxus" src="/assets/img/logo.png" class="logo" />
     </header>
-    <div class="flex">
+    <div class="flex body-section">
       <div class="course-section flex-column">
         <h1 class="course-title">
           Curso online sobre mídia prográmatica para <br />
           e-commerce
         </h1>
         <h6 class="subtitle course-subtitle">Curso Digital Express</h6>
-        <div class="flex-center">
+        <div class="flex-center price-section">
           <h6 class="price-text course-price">
             gratuito
           </h6>
@@ -93,7 +95,7 @@
         </div>
       </div>
       <form id="myform" method="post" name="registration">
-        <div class="form-section form-card">
+        <div id="form-section" class="form-section form-card">
           <h6 class="price-text form-title">
             Garanta o curso nessa oferta
           </h6>
@@ -111,28 +113,34 @@
             <span>Primeiro Nome</span>
           </label>
 
-          <label for="lastname" class="textfield">
+          <label id="field-lastname" for="lastname" class="textfield">
             <input type="text" name="lastname" id="lastname" placeholder=" " />
             <span>Sobrenome</span>
           </label>
 
-          <label for="email" class="textfield">
-            <input type="email" name="email" id="email" placeholder=" " />
+          <label id="field-email" for="email" class="textfield">
+            <input type="text" name="email" id="email" placeholder=" " />
             <span>E-mail</span>
           </label>
 
-          <label for="phone" class="textfield">
-            <input type="text" name="phone" id="phone" placeholder=" " />
+          <label id="field-phone" for="phone" class="textfield">
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder=" "
+              maxlength=""
+            />
             <span>Telefone</span>
           </label>
 
-          <label for="company" class="textfield">
+          <label id="field-company" for="company" class="textfield">
             <input type="text" name="company" id="company" placeholder=" " />
             <span>Nome da Empresa</span>
           </label>
 
-          <label for="url" class="textfield">
-            <input type="url" name="url" id="url" placeholder=" " />
+          <label id="field-url" for="url" class="textfield">
+            <input type="text" name="url" id="url" placeholder=" " />
             <span>URL do site</span>
           </label>
 
@@ -142,10 +150,49 @@
           <div class="form-helper">
             <span class="form-helper">
               Ao confirmar sua inscrição garantimos a segurança dos seus dados e
-              apenas os usaremos para entrar em contato. Confira nossa Política
-              de Privacidade.
+              apenas os usaremos para entrar em contato. Confira nossa <a class="underline" href="#">Política
+              de Privacidade.</a>
             </span>
           </div>
+        </div>
+        <div
+          id="bubbles"
+          class="form-section form-card flex-column-center justify-center display-none"
+        >
+          <div class="LoaderBalls ">
+            <div class="LoaderBalls__item"></div>
+            <div class="LoaderBalls__item"></div>
+            <div class="LoaderBalls__item"></div>
+          </div>
+        </div>
+        <div
+          id="thanks-section"
+          class="form-section form-card flex-column-center display-none"
+        >
+          <img
+            alt="Mail Icon"
+            src="/assets/img/mail-icon.svg"
+            class="mail-icon"
+          />
+          <h2 class="thanks-title">
+            Será um prazer aprendermos juntos!
+          </h2>
+          <h6 class="thanks-subtitle">
+            Olhe sua caixa de e-mail onde encontrará o cupom para adquirir o
+            curso de forma gratuita. Aproveite para acessar a página do curso
+            por aqui.
+          </h6>
+          <button class="thanks-button">
+            Me leve ao curso
+          </button>
+          <button class="thanks-secondary-button" type="submit">
+            Reenviar e-mail
+          </button>
+          <h6 class="thanks-politics">
+            Ao confirmar sua inscrição garantimos a segurança dos seus dados e
+            apenas os usaremos para entrar em contato. Confira nossa
+            <a href="#">Política de Privacidade.</a>
+          </h6>
         </div>
       </form>
     </div>
@@ -209,27 +256,33 @@
       </div>
     </div>
     <footer class="flex-center justify-center">
-      <img
-        alt="Voxus Logo Footer"
-        class="logo-footer"
-        src="/assets/img/voxus-footer.png"
-      />
-      <span class="copyright">@ 2019, Voxus. Todos os direitos reservados</span>
-      <a>
-        <span class="footer-tag">
-          Política de Privacidade
-        </span>
-      </a>
-      <a>
-        <span class="footer-tag">
-          Termos de Uso
-        </span>
-      </a>
-      <a>
-        <span class="footer-tag">
-          Contato
-        </span>
-      </a>
+      <div class="flex-center copyright-section">
+        <img
+          alt="Voxus Logo Footer"
+          class="logo-footer"
+          src="/assets/img/voxus-footer.png"
+        />
+        <span class="copyright"
+          >@ 2019, Voxus. Todos os direitos reservados</span
+        >
+      </div>
+      <div class="flex-center tag-section">
+        <a href="#" class="footer-tag-margin">
+          <span class="footer-tag">
+            Política de Privacidade
+          </span>
+        </a>
+        <a href="#" class="footer-tag-margin">
+          <span class="footer-tag">
+            Termos de Uso
+          </span>
+        </a>
+        <a href="#" class="footer-tag-margin">
+          <span class="footer-tag">
+            Contato
+          </span>
+        </a>
+      </div>
     </footer>
     <script
       type="text/javascript"
@@ -240,6 +293,8 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
     ></script>
+
+    <script type="text/javascript" src="/mask.js"></script>
     <script type="text/javascript">
       (function() {
         emailjs.init("user_jrK2hqcIcbXcWKWsFOMgj");

@@ -1,24 +1,15 @@
-.error-border {
-  --pure-material-safari-helper1: #EB2151 !important;
-  position: relative;
-  display: inline-block;
-  padding-top: 6px;
-  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
-  font-size: 16px;
-  line-height: 1.5;
-  overflow: hidden;
-  width: 350px;
-  height: 52px;
-  margin-bottom: 24px;
+body .error-border {
+  --pure-material-safari-helper1: #EB2151 ;
 }
 
+
 /* Input, Textarea */
-.error-border > input,
-.error-border > textarea {
+body .error-border > input,
+body .error-border > textarea {
   box-sizing: border-box;
   margin: 0;
-  border: solid 1px !important; /* Safari */
-  border-color: #EB2151 !important;
+  border: solid 1px; /* Safari */
+  border-color: #EB2151;
   border-top-color: transparent;
   border-radius: 4px;
   padding: 15px 55px 15px 16px;
@@ -30,38 +21,38 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  caret-color: #EB2151 !important;
+  caret-color: var(--pure-material-safari-helper1);
   transition: border 0.2s, box-shadow 0.2s;
 }
 
 /* Span */
-.error-border > input + span,
-.error-border > textarea + span {
+body .error-border > input + span,
+body .error-border > textarea + span {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
-  border-color: rgba(116, 130, 150, 0.6);
+  border-color: #EB2151;
   width: 100%;
   max-height: 100%;
   cursor: text;
   transition: color 0.2s, font-size 0.2s, line-height 0.2s;
   font-size: 16px;
   line-height: 13px;
-  color: var(--placeholder);
+  color: #EB2151;
 }
 
 /* Corners */
-.error-border > input + span::before,
-.error-border > input + span::after,
-.error-border > textarea + span::before,
-.error-border > textarea + span::after {
+body .error-border > input + span::before,
+body .error-border > input + span::after,
+body .error-border > textarea + span::before,
+body .error-border > textarea + span::after {
   content: "";
   display: block;
   box-sizing: border-box;
   margin-top: 6px;
   border-top: solid 1px;
-  border-top-color: rgba(116, 130, 150, 0.6);
+  border-top-color: #EB2151;
   min-width: 10px;
   height: 8px;
   pointer-events: none;
@@ -69,125 +60,8 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.error-border > input + span::before,
-.error-border > textarea + span::before {
-  margin-right: 4px;
-  border-left: solid 1px transparent;
-  border-radius: 4px 0;
-}
-
-.error-border > input + span::after,
-.error-border > textarea + span::after {
-  flex-grow: 1;
-  margin-left: 4px;
-  border-right: solid 1px transparent;
-  border-radius: 0 4px;
-}
-
-/* Hover */
-.error-border:hover > input,
-.error-border:hover > textarea {
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-  border-top-color: transparent;
-}
-
-.error-border:hover > input + span::before,
-.error-border:hover > textarea + span::before,
-.error-border:hover > input + span::after,
-.error-border:hover > textarea + span::after {
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-}
-
-.error-border:hover > input:not(:focus):placeholder-shown,
-.error-border:hover > textarea:not(:focus):placeholder-shown {
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-}
-
 /* Placeholder-shown */
-.error-border > input:not(:focus):placeholder-shown,
-.error-border > textarea:not(:focus):placeholder-shown {
-  border-top-color: rgba(116, 130, 150, 0.6);
-}
-
-.error-border > input:not(:focus):placeholder-shown + span,
-.error-border > textarea:not(:focus):placeholder-shown + span {
-  font-size: inherit;
-  line-height: 68px;
-}
-
-.error-border > input:not(:focus):placeholder-shown + span::before,
-.error-border > textarea:not(:focus):placeholder-shown + span::before,
-.error-border > input:not(:focus):placeholder-shown + span::after,
-.error-border > textarea:not(:focus):placeholder-shown + span::after {
-  border-top-color: transparent;
-}
-
-/* Focus */
-.error-border > input:focus,
-.error-border > textarea:focus {
-  border-color: #EB2151 !important;
-  border-top-color: transparent;
-  box-shadow: inset 1px 0 #EB2151, inset -1px 0 #EB2151, inset 0 -1px #EB2151;
-  outline: none;
-}
-
-.error-border > input:focus + span,
-.error-border > textarea:focus + span {
-  color: #EB2151 !important;
-}
-
-.error-border > input:focus + span::before,
-.error-border > input:focus + span::after,
-.error-border > textarea:focus + span::before,
-.error-border > textarea:focus + span::after {
-  border-top-color: #EB2151 !important;
-  box-shadow: inset 0 1px #EB2151;
-}
-
-/* Disabled */
-.error-border > input:disabled,
-.error-border > input:disabled + span,
-.error-border > textarea:disabled,
-.error-border > textarea:disabled + span {
-  border-color: #EB2151 !important;
-  border-top-color: transparent !important;
-  color: #EB2151 !important;
-  pointer-events: none;
-}
-
-.error-border > input:disabled + span::before,
-.error-border > input:disabled + span::after,
-.error-border > textarea:disabled + span::before,
-.error-border > textarea:disabled + span::after {
-  border-top-color: #EB2151 !important;
-}
-
-.error-border > input:disabled:placeholder-shown,
-.error-border > input:disabled:placeholder-shown + span,
-.error-border > textarea:disabled:placeholder-shown,
-.error-border > textarea:disabled:placeholder-shown + span {
-  border-top-color: #EB2151 !important;
-}
-
-.error-border > input:disabled:placeholder-shown + span::before,
-.error-border > input:disabled:placeholder-shown + span::after,
-.error-border > textarea:disabled:placeholder-shown + span::before,
-.error-border > textarea:disabled:placeholder-shown + span::after {
-  border-top-color: transparent !important;
-}
-
-/* Faster transition in Safari for less noticable fractional font-size issue */
-@media not all and (min-resolution:.001dpcm) {
-  @supports (-webkit-appearance:none) {
-      .error-border > input,
-      .error-border > input + span,
-      .error-border > textarea,
-      .error-border > textarea + span,
-      .error-border > input + span::before,
-      .error-border > input + span::after,
-      .error-border > textarea + span::before,
-      .error-border > textarea + span::after {
-          transition-duration: 0.1s;
-      }
-  }
+body .error-border > input:not(:focus):placeholder-shown,
+body .error-border > textarea:not(:focus):placeholder-shown {
+  border-top-color: #EB2151;
 }

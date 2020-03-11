@@ -105,11 +105,15 @@ body {
   height: 52px;
   margin: 0 0 20px 0;
   border-radius: 13px;
-  background-color: var(--alert);
+  background: #FF79AD;
   font-weight: 500;
   font-size: 26px;
   line-height: 30px;
   color: white;
+}
+
+.form-button:hover {
+  background-color: var(--alert);
 }
 
 .form-helper {
@@ -175,4 +179,74 @@ footer {
 .footer-tag {
   color: white;
   margin-right: 18px;
+}
+
+/* Thanks Form */
+
+.mail-icon {
+  margin-top: 30px;
+}
+
+.thanks-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #203656;
+  width: 354px;
+  height: 84px;
+  text-align: center;
+  margin: 37px 0 20px 0;
+}
+
+.thanks-subtitle {
+  font-size: 18px;
+  line-height: 164%;
+  color: #8592a3;
+  width: 350px;
+  height: 120px;
+  text-align: center;
+}
+
+.thanks-button {
+  width: 350px;
+  height: 53px;
+  background: #FF79AD;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 164%;
+  color: #ffffff;
+  margin: 50px 0 19px 0;
+}
+
+.thanks-button:hover {
+  background: #f44d8d;
+}
+
+.thanks-secondary-button {
+  width: 180px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 164%;
+  color: #326fff;
+  background-color: white;
+    text-decoration: none;
+    border-color: transparent;
+}
+
+.thanks-secondary-button:hover {
+  text-decoration: underline;
+}
+
+.thanks-politics {
+  width: 350px;
+  height: 46px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #afb9cf;
+  margin-top: 40px;
+}
+
+.underline {
+  text-decoration: underline;
 }

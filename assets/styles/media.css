@@ -1,0 +1,218 @@
+@media (min-width: 768px) and (max-width: 1200px) {
+  body {
+    background-position: right 1280px;
+  }
+
+  .body-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-section {
+    align-items: center;
+    margin-bottom: 200px;
+  }
+
+  .course-title {
+    text-align: center;
+  }
+
+  .form-card {
+    margin-left: 0;
+  }
+
+  .depo-section {
+    flex-direction: column;
+    align-self: center;
+    margin-top: 200px;
+  }
+
+  .depo-margin {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 294px;
+  }
+
+  .logo-footer {
+    margin-right: 0;
+  }
+
+  .copyright {
+    margin: 0 0 0 0;
+  }
+
+  .copyright-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-footer {
+    margin: 60px 0 20px 0;
+  }
+
+  .footer-tag {
+    margin-right: 0;
+  }
+
+  .footer-tag-margin {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-position: right 1730px
+  }
+
+  .body-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-section {
+    align-items: center;
+    margin-bottom: 200px;
+  }
+
+  .course-title {
+    text-align: center;
+    width: 321px;
+    height: 257px;
+  }
+
+  .course-text {
+    width: 330px;
+    height: 172px;
+    margin-bottom: 80px;
+  }
+
+  .bullet-text {
+    width: 266px;
+  }
+
+  .form-card {
+    margin-left: 0;
+    width: 270px;
+    padding: 40px 30px 40px 30px;
+  }
+
+  .form-title {
+    width: 269px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .form-subtitle {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .form-button {
+    width: 270px;
+  }
+
+  .form-helper {
+    width: 270px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .textfield {
+    width: 270px;
+  }
+
+  .depo-section {
+    flex-direction: column;
+    align-self: center;
+    margin-top: 200px;
+  }
+
+  .depo-margin {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .depo-text {
+    width: 330px;
+    height: 152px;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 294px;
+  }
+
+  .logo-footer {
+    margin-right: 0;
+  }
+
+  .copyright {
+    margin: 0 0 0 0;
+  }
+
+  .copyright-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-footer {
+    margin: 60px 0 20px 0;
+  }
+
+  .footer-tag {
+    margin-right: 0;
+  }
+
+  .footer-tag-margin {
+    margin-top: 12px;
+  }
+
+  .thanks-title {
+    font-weight: normal;
+    font-size: 28px;
+    width: 270px;
+  }
+  
+  .thanks-subtitle {
+    font-size: 18px;
+    width: 270px;
+  }
+  
+  .thanks-button {
+    width: 270px;
+    font-size: 24px;
+  }
+  
+  .thanks-secondary-button {
+    font-size: 16px;
+  }
+  
+  .thanks-politics {
+    width: 270px;
+    margin-top: 20px;
+  }
+}
